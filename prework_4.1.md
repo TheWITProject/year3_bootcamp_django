@@ -53,7 +53,7 @@ urlpatterns = [
   path('api/', include('blog.urls')),
 ]
 ```
-6. Update your mysite/settings.py file to include `rest_framework` in `INSTALLED_APPS`"
+6. Update your mysite/settings.py file to include `rest_framework` in `INSTALLED_APPS`
 ```
 INSTALLED_APPS = [
     'django.contrib.admin',
