@@ -4,8 +4,8 @@ Since the formatting was not maintained in google classroom, please follow the d
 ## Steps:
 1. Install DRF using pip in your virtual environment. DRF is the Django REST Framework. Run this in your terminal: `pip3 install djangorestframework`
 2. Create a new file called serializers.py in blog/. This is where you’ll tell Django how to serialize the models in models.py. The serializers will convert the Post model into JSON that will be used by the API to return data to the user. Add this to your serializers.py file:
-from rest_framework import serializers
 ```
+from rest_framework import serializers
 from blog.models import Post
 class PostSerializer(serializers.ModelSerializer):
   class Meta:
@@ -21,8 +21,8 @@ from blog.serializers import PostSerializer
 from blog.models import Post
 
 class PostViewSet(viewsets.ModelViewSet):
-queryset = Post.objects.all()
-serializer_class = PostSerializer
+  queryset = Post.objects.all()
+  serializer_class = PostSerializer
 
 def post_list(request):
   return render(request, 'blog/post_list.html', {}) 
